@@ -3,7 +3,11 @@ import 'package:e_commerce_app_widgets/utils/extensions/extensions.dart';
 class TextFieldValidatorUtils {
   static String? validateEmail(String? value) {
     if (value == null) {
-      return null;
+      return 'Email is not valid!';
+    } else {
+      if (value.isEmpty) {
+        return 'Email is not valid!';
+      }
     }
 
     var result = value.isEmail();
@@ -16,7 +20,11 @@ class TextFieldValidatorUtils {
 
   static String? validatePhoneNumber(String? value) {
     if (value == null) {
-      return null;
+      return 'Phone is not valid!';
+    } else {
+      if (value.isEmpty) {
+        return 'Phone is not valid!';
+      }
     }
 
     var result = value.isPhoneNumber();
@@ -29,13 +37,21 @@ class TextFieldValidatorUtils {
 
   static String? validateName(String? value) {
     if (value == null) {
-      return null;
+      return 'Name is not valid!';
+    } else {
+      if (value.isEmpty) {
+        return 'Name is not valid!';
+      }
     }
   }
 
   static String? validatePassword(String? value) {
     if (value == null) {
-      return null;
+      return 'Password is not valid!';
+    } else {
+      if (value.isEmpty) {
+        return 'Password is not valid!';
+      }
     }
   }
 }

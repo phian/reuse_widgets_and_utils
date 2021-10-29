@@ -11,6 +11,7 @@ class BaseAppBar extends StatelessWidget with PreferredSizeWidget {
     this.backgroundColor,
     this.elevation,
     this.leading,
+    this.appBarSize,
   }) : super(key: key);
 
   final Widget? title;
@@ -21,6 +22,7 @@ class BaseAppBar extends StatelessWidget with PreferredSizeWidget {
   final Color? backgroundColor;
   final double? elevation;
   final Widget? leading;
+  final Size? appBarSize;
 
   @override
   Widget build(BuildContext context) {
@@ -55,5 +57,5 @@ class BaseAppBar extends StatelessWidget with PreferredSizeWidget {
   }
 
   @override
-  Size get preferredSize => Size(AppBar().preferredSize.width, AppBar().preferredSize.height);
+  Size get preferredSize => appBarSize ?? Size(AppBar().preferredSize.width, AppBar().preferredSize.height);
 }
