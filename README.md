@@ -1,6 +1,6 @@
-# e_commerce_app_widgets
+# reuse_widgets_and_utils
 
-The custom widgets for ECommerce project.
+The custom widgets and utils using Flutter framework widgets and Dart programming language.
 
 ## Getting Started
 
